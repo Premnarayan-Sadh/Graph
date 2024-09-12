@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar Chart</title>
+    <canvas id="myChart" style="height: 40%; width: 23%;"></canvas>
+</head>
+
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        var ctx = document.getElementById("myChart").getContext("2d");
+        var myChart = new Chart(ctx, {
+            type: "line",
+            data: {
+                labels: ['Age 0','0-5', '5-10', '10-15', '15-20', '20-25', '25-30', '30-35', '35-40'],
+                datasets: [{
+                    label: 'Income',
+                    data: [0, 450, 100, 500, 3400, 2300, 450, 650,950],
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                  
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 4
+                }, {
+                    label: 'Expenses',
+                    data: [0, 1250, 550, 0, 2500, 455, 0, 345,300],
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 3
+                    
+                }]
+            },
+            options: {
+          
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Age wise Income and Expenses Chart'
+                    },
+                    legend: {
+                        display: true,
+                        position: 'bottom',   
+                    },
+
+                }
+            }
+        });
+    </script>
+
+
+ <div style="text-align: center; margin-top: 20px;"><b>Chart made by Prem</b></div>
+
+
+
+
+</body>
+</html>
+
